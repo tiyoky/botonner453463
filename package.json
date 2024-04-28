@@ -1,0 +1,14 @@
+{
+  "name": "gestion",
+  "version": "1.0.0",
+  "description": "Description de ton projet",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "tiyoky",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^13.5.1"
+  }
+}
