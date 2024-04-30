@@ -1,5 +1,5 @@
 const { Client, Intents, CommandInteractionOptionResolver } = require('discord.js');
-
+const prefix = '+';
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
 client.on('ready', () => {
@@ -26,6 +26,12 @@ client.on('interactionCreate', async (interaction) => {
       console.error(error);
       await interaction.reply('Error stopping the bot.');
     }
+  }
+});
+
+client.on('message', message => {
+  if (message.content.startsWith(prefix + 'test')) {
+    message.channel.send('test');
   }
 });
 
